@@ -20,15 +20,11 @@
     "logoAria": "City Hub"
   },
   "hero": {
-    "eyebrow": "Strategic management & professional consulting",
-    "title": {
-      "line1": "Build.",
-      "line2": "Operate.",
-      "line3": "Scale."
-    },
-    "lead": "City Hub — Strategic management system and professional consulting solutions for the F&B sector.",
-    "subline": "From the idea to the operation.",
-    "cta": "Start Your Investment Journey",
+    "eyebrow": "Embark on your investment journey with City Hub",
+    "title": "Are you ready to be part of an integrated ecosystem that builds, operates, and scales?",
+    "lead_1": "At City Hub, we don't just offer an opportunity... we provide a complete system from idea to operation with integrated consulting services covering marketing, operations, financial management, and proven Franchise models all under one roof.",
+    "lead_2": "We accompany you every step of the way—from the first contact to the grand opening and expansion—to ensure a successful and sustainable investment experience.",
+    "cta": "Submit Franchise Request",
     "secondaryCta": "Explore our brands",
     "imageAlt": "City Hub brands",
     "badge": {
@@ -40,6 +36,7 @@
       "system": { "value": "1", "label": "Integrated system" }
     }
   },
+
   "about": {
     "eyebrow": "About City Hub",
     "title": "More than a developer. A full F&B ecosystem.",

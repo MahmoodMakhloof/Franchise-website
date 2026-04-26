@@ -16,21 +16,6 @@ const HERO_PRODUCTS = [
   { key: 'ktown',       image: '/images/ktown/korian-fried-chicken.webp',  tint: '#fef3c7' },
 ] as const;
 
-function WordReveal({ text, delay = 0, className = '' }: { text: string; delay?: number; className?: string }) {
-  return (
-    <span className={`inline-block overflow-hidden align-bottom ${className}`}>
-      <motion.span
-        className="inline-block pb-2 pt-2 rtl:pb-6 rtl:pt-3"
-        initial={{ y: '105%' }}
-        animate={{ y: 0 }}
-        transition={{ duration: 1, delay, ease: [0.16, 1, 0.3, 1] }}
-      >
-        {text}
-      </motion.span>
-    </span>
-  );
-}
-
 
 export function Hero() {
   const t = useTranslations('hero');
@@ -52,48 +37,39 @@ export function Hero() {
       >
         {/* ── TEXT SIDE ── */}
         <div className="lg:ps-[80px] xl:ps-[112px] lg:pe-6">
-          {/* Top rule + eyebrow */}
+          {/* Eyebrow */}
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-            className="mb-6 flex items-center gap-5 sm:mb-10"
+            className="mb-6 inline-flex items-center gap-3 rounded-full bg-red-50 px-4 py-2 sm:mb-8"
           >
-            <span className="h-[2px] w-10 bg-red-600 sm:w-16" />
-            <span className="text-[10px] font-bold uppercase tracking-[0.35em] text-red-600 sm:text-xs">
+            <span className="h-2 w-2 rounded-full bg-red-600 animate-pulse" />
+            <span className="text-[11px] font-bold uppercase tracking-wider text-red-600 sm:text-xs">
               {t('eyebrow')}
             </span>
           </motion.div>
 
           {/* Headline */}
-          <h1 className="h-display font-black leading-[0.92] tracking-tight text-gray-950 text-[2.6rem] sm:text-[3.8rem] md:text-[4.5rem] lg:text-[5rem] xl:text-[6.2rem] space-y-1 rtl:space-y-4 sm:rtl:space-y-6">
-            <div className="block"><WordReveal text={t('title.line1')} delay={0.1} /></div>
-            <div className="block sm:ms-4 lg:ms-8"><WordReveal text={t('title.line2')} delay={0.2} /></div>
-            <div className="relative block sm:ms-10 lg:ms-16">
-              <WordReveal
-                text={t('title.line3')}
-                delay={0.3}
-                className="text-red-600"
-              />
-              <motion.span
-                initial={{ scaleX: 0 }}
-                animate={{ scaleX: 1 }}
-                transition={{ duration: 1, delay: 0.9, ease: [0.16, 1, 0.3, 1] }}
-                className="absolute bottom-[10%] start-0 block h-[4px] w-14 origin-[start] rounded-full bg-red-600 sm:h-[6px] sm:w-24"
-                aria-hidden
-              />
-            </div>
-          </h1>
-
-          {/* Lead */}
-          <motion.p
+          <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
-            className="mt-6 max-w-xl text-[15px] leading-relaxed text-gray-600 sm:mt-8 sm:text-base md:text-lg font-medium"
+            transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
+            className="font-display text-[1.75rem] font-black leading-[1.15] text-gray-950 sm:text-4xl md:text-[2.75rem] lg:text-[3.35rem]"
           >
-            {t('lead')}
-          </motion.p>
+            {t('title')}
+          </motion.h1>
+
+          {/* Lead Paragraphs */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
+            className="mt-6 max-w-xl space-y-4 text-[15px] font-medium leading-relaxed text-gray-600 sm:mt-8 sm:text-[17px]"
+          >
+            <p>{t('lead_1')}</p>
+            <p>{t('lead_2')}</p>
+          </motion.div>
 
           {/* CTAs */}
           <motion.div
