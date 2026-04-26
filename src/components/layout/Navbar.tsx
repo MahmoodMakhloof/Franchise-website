@@ -32,18 +32,17 @@ export function Navbar() {
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${scrolled ? 'bg-white border-b border-gray-100 shadow-sm' : 'bg-white/80 backdrop-blur-md'
         }`}
     >
-      <div className="mx-auto flex w-full max-w-[1400px] h-20 items-center justify-between gap-6 px-4 sm:h-24 sm:px-6 lg:px-8">
+      <div className="mx-auto flex w-full max-w-[1400px] h-16 items-center justify-between gap-6 px-4 sm:h-20 sm:px-6 lg:px-8">
         {/* Logo */}
         <Link 
           href="/" 
           className="flex-none flex items-center" 
           aria-label={t('logoAria')}
         >
-          <div className="relative h-14 w-[130px] sm:h-[70px] sm:w-[160px]">
-            {/* Desktop static logo */}
+          <div className="relative h-[60px] w-[150px] sm:h-[76px] sm:w-[200px]">
             <div className="hidden lg:block absolute inset-0">
               <Image
-                src="/images/hero/cityhub-place.webp"
+                src="/images/city hub logo.png"
                 alt={t('logoAria')}
                 fill
                 priority
@@ -55,7 +54,7 @@ export function Navbar() {
               {!open && (
                 <motion.div layoutId="mobile-logo" className="lg:hidden absolute inset-0">
                   <Image
-                    src="/images/hero/cityhub-place.webp"
+                    src="/images/city hub logo.png"
                     alt={t('logoAria')}
                     fill
                     priority
@@ -104,11 +103,11 @@ export function Navbar() {
                         {BRANDS.map((b) => {
                           const isProductShot = b.key === 'ktown';
                           return (
-                            <Link
+                            <div
                               key={b.key}
-                              href={`/brands/${b.slug}`}
-                              onClick={() => setBrandsOpen(false)}
-                              className="group flex items-center gap-3 rounded-xl px-3 py-2.5 transition hover:bg-gray-50"
+                              // href={`/brands/${b.slug}`}
+                              // onClick={() => setBrandsOpen(false)}
+                              className="group flex items-center gap-3 rounded-xl px-3 py-2.5 transition hover:bg-gray-50 cursor-default"
                             >
                               <div
                                 className="relative h-11 w-11 flex-none overflow-hidden rounded-lg ring-1 ring-gray-100 transition-transform duration-300 group-hover:scale-110"
@@ -136,7 +135,7 @@ export function Navbar() {
                                   {brandsT(`${b.key}.cuisine`)}
                                 </div>
                               </div>
-                            </Link>
+                            </div>
                           );
                         })}
                       </div>
@@ -200,7 +199,7 @@ export function Navbar() {
                 <Link href="/" onClick={() => setOpen(false)} className="block w-full">
                   <motion.div layoutId="mobile-logo" className="relative w-full aspect-[1.42]">
                     <Image
-                      src="/images/hero/cityhub-place.webp"
+                      src="/images/city hub logo.png"
                       alt={t('logoAria')}
                       fill
                       priority
@@ -235,11 +234,11 @@ export function Navbar() {
                             {BRANDS.map((b) => {
                               const isProductShot = b.key === 'ktown';
                               return (
-                                <Link
+                                <div
                                   key={b.key}
-                                  href={`/brands/${b.slug}`}
-                                  onClick={() => setOpen(false)}
-                                  className="flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm hover:bg-gray-50"
+                                  // href={`/brands/${b.slug}`}
+                                  // onClick={() => setOpen(false)}
+                                  className="flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm hover:bg-gray-50 cursor-default"
                                 >
                                   <div
                                     className="relative h-9 w-9 flex-none overflow-hidden rounded-lg ring-1 ring-gray-100"
@@ -265,7 +264,7 @@ export function Navbar() {
                                   <span className="ms-auto text-[10px] font-bold uppercase tracking-[0.18em] text-gray-400">
                                     {brandsT(`${b.key}.cuisine`)}
                                   </span>
-                                </Link>
+                                </div>
                               );
                             })}
                           </div>

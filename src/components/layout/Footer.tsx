@@ -19,7 +19,7 @@ export function Footer() {
           <div className="space-y-5 md:col-span-2">
             <div className="flex items-center gap-3">
               <Image
-                src="/images/hero/cityhub-place.webp"
+                src="/images/city hub logo.png"
                 alt="City Hub"
                 width={120}
                 height={40}

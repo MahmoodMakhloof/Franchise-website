@@ -31,9 +31,9 @@ function BrandPanel({
         ease: [0.16, 1, 0.3, 1],
       }}
     >
-      <Link
-        href={`/${locale}/brands/${b.slug}`}
-        className="group relative block aspect-[4/5] overflow-hidden sm:aspect-[4/5] lg:aspect-[6/5]"
+      <div
+        // href={`/${locale}/brands/${b.slug}`}
+        className="group relative block aspect-[4/5] overflow-hidden sm:aspect-[4/5] lg:aspect-[6/5] cursor-default"
         style={{ background: b.accent }}
         aria-label={t(`items.${b.key}.name`)}
       >
@@ -92,6 +92,7 @@ function BrandPanel({
         </div>
 
         {/* CTA + arrows — desktop only (hover-reveal). Hidden on mobile/tablet to avoid overlap. */}
+        {/*
         <div className="absolute inset-x-0 bottom-0 z-20 hidden items-end justify-between px-5 pb-5 md:px-7 md:pb-7 lg:flex lg:opacity-0 lg:translate-y-4 lg:transition-all lg:duration-500 lg:delay-300 lg:ease-[cubic-bezier(0.16,1,0.3,1)] lg:group-hover:opacity-100 lg:group-hover:translate-y-0">
           <span className="text-[11px] font-bold uppercase tracking-[0.28em] text-white">
             {t('cta')}
@@ -108,7 +109,8 @@ function BrandPanel({
             </span>
           </div>
         </div>
-      </Link>
+        */}
+      </div>
     </motion.div>
   );
 }
