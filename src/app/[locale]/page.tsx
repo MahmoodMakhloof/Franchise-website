@@ -8,6 +8,7 @@ import { Services } from '@/sections/Services';
 import { Gallery } from '@/sections/Gallery';
 import { Stats } from '@/sections/Stats';
 import { Why } from '@/sections/Why';
+import { Story } from '@/sections/Story';
 import { Process } from '@/sections/Process';
 import { Vision } from '@/sections/Vision';
 import { Support } from '@/sections/Support';
@@ -33,6 +34,7 @@ export default async function HomePage({
         <Gallery />
         <Stats />
         <Why />
+        <Story />
         <Process />
         <Vision />
         <Support />

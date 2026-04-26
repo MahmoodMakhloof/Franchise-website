@@ -136,6 +136,16 @@
       { "title": "Franchise-ready models", "description": "Systems, documentation, and support built to scale from day one." }
     ]
   },
+  "story": {
+    "eyebrow": "Our Story",
+    "title": "From Idea to Integrated Ecosystem",
+    "subtitle": "The Journey of City Hub Through the Years",
+    "paragraphs": [
+      "City Hub started in 2012 with a clear vision to build a different system in the F&B sector — a system that is not limited to creating a brand or operating a project, but connects manufacturing, operations, marketing, and development in one ecosystem.",
+      "What started as an idea to provide real solutions for the Egyptian market has evolved into a complete portfolio of brands and investment experiences.",
+      "Our journey is built on developing effective systems, continuous improvement, and a commitment to creating real, sustainable growth opportunities."
+    ]
+  },
   "process": {
     "eyebrow": "Franchise process",
     "title": "From request to launch — 6 structured steps",
