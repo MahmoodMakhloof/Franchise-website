@@ -7,19 +7,8 @@ import { ArrowRight } from 'lucide-react';
 import { useRef } from 'react';
 import { Link } from '@/i18n/routing';
 
-const HERO_PRODUCTS = [
-  { key: 'jinzo',       image: '/images/jinzo/img-p7-01.webp',            tint: '#fef3e7' },
-  { key: 'haret',       image: '/images/haret/img-p11-01.webp',           tint: '#f3e9dc' },
-  { key: 'stravo',      image: '/images/stravo/03.webp',                   tint: '#fde2df' },
-  { key: 'shakencake',  image: '/images/shakencake/sc-20.webp',            tint: '#fce7f3' },
-  { key: 'tokyotreats', image: '/images/tokyotreats/tokyo-06.webp',        tint: '#fee2e2' },
-  { key: 'ktown',       image: '/images/ktown/korian-fried-chicken.webp',  tint: '#fef3c7' },
-] as const;
-
-
 export function Hero() {
   const t = useTranslations('hero');
-  const tBrands = useTranslations('brands.items');
   const ref = useRef<HTMLElement>(null);
 
   const { scrollYProgress } = useScroll({ target: ref, offset: ['start start', 'end start'] });
@@ -117,77 +106,29 @@ export function Hero() {
         </div>
 
         {/* ── IMAGE SIDE ── */}
-        <div className="relative mx-auto hidden h-[500px] w-full max-w-[600px] sm:block sm:h-[600px] md:h-[650px] lg:h-[750px] lg:max-w-[650px] lg:pe-12 lg:ps-6">
-          {/* Subtle Red Ambient Glow */}
+        <motion.div 
+           initial={{ opacity: 0, scale: 0.95, y: 20 }}
+           animate={{ opacity: 1, scale: 1, y: 0 }}
+           transition={{ delay: 0.3, duration: 1, ease: [0.16, 1, 0.3, 1] }}
+           className="relative mx-auto flex w-full max-w-[320px] sm:max-w-[500px] items-center justify-center lg:max-w-[700px] lg:pe-8 lg:ps-8 mt-12 lg:mt-0"
+        >
+          {/* Subtle Red Ambient Glow behind logo */}
           <div className="absolute inset-0 flex items-center justify-center pointer-events-none" aria-hidden>
-            <div className="h-[50%] w-[50%] rounded-full bg-red-600/8 blur-[100px]" />
+            <div className="h-[60%] w-[60%] rounded-full bg-red-600/10 blur-[100px]" />
           </div>
-
-          {HERO_PRODUCTS.map((p, i) => {
-            const name = tBrands(`${p.key}.name`);
-
-            const layouts = [
-              { pos: 'top-[2%] end-[5%]',       size: 'h-[30%] w-[48%]', rotate: -2, zIndex: 10 },
-              { pos: 'top-[16%] start-[2%]',    size: 'h-[26%] w-[42%]', rotate:  2, zIndex: 20 },
-              { pos: 'top-[36%] end-[8%]',      size: 'h-[24%] w-[46%]', rotate: -1, zIndex: 30 },
-              { pos: 'top-[50%] start-[5%]',    size: 'h-[28%] w-[48%]', rotate:  3, zIndex: 40 },
-              { pos: 'bottom-[6%] end-[12%]',   size: 'h-[24%] w-[44%]', rotate: -2, zIndex: 50 },
-              { pos: 'bottom-[0%] start-[6%]',  size: 'h-[26%] w-[42%]', rotate:  1, zIndex: 60 },
-            ] as const;
-            const L = layouts[i];
-
-            return (
-              <motion.div
-                key={p.key}
-                initial={{ opacity: 0, y: 80, scale: 0.9 }}
-                animate={{ opacity: 1, y: 0, scale: 1, rotate: L.rotate }}
-                transition={{ delay: 0.3 + i * 0.1, duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
-                whileHover={{
-                  rotate: 0,
-                  scale: 1.04,
-                  zIndex: 100,
-                  transition: { duration: 0.4, ease: [0.16, 1, 0.3, 1] }
-                }}
-                className={`absolute ${L.pos} ${L.size} overflow-hidden rounded-[2rem] shadow-2xl shadow-gray-950/15 ring-1 ring-black/5 bg-white cursor-pointer`}
-                style={{ zIndex: L.zIndex }}
-              >
-                <div className="absolute inset-0 bg-black/5 mix-blend-multiply z-10 pointer-events-none transition-opacity duration-500 hover:opacity-0" />
-                <Image
-                  src={p.image}
-                  alt={name}
-                  fill
-                  sizes="(min-width:1024px) 25vw, 50vw"
-                  priority={i < 3}
-                  className="object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(0.16,1,0.3,1)] hover:scale-[1.08]"
-                />
-              </motion.div>
-            );
-          })}
-        </div>
-
-        {/* ── MOBILE IMAGE GRID ── */}
-        <div className="grid grid-cols-3 gap-3 sm:hidden">
-          {HERO_PRODUCTS.slice(0, 3).map((p, i) => {
-            const name = tBrands(`${p.key}.name`);
-            return (
-              <motion.div
-                key={p.key}
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.4 + i * 0.1, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-                className="relative aspect-square overflow-hidden rounded-2xl shadow-lg ring-1 ring-black/5"
-              >
-                <Image
-                  src={p.image}
-                  alt={name}
-                  fill
-                  sizes="33vw"
-                  className="object-cover"
-                />
-              </motion.div>
-            );
-          })}
-        </div>
+          
+          <div className="relative w-full aspect-[1.42]">
+            <Image
+              src="/images/hero/cityhub-place.webp"
+              alt="City Hub"
+              fill
+              priority
+              sizes="(max-width: 1024px) 90vw, 50vw"
+              className="object-contain"
+              style={{ filter: "drop-shadow(0 20px 40px rgba(0,0,0,0.08))" }}
+            />
+          </div>
+        </motion.div>
       </motion.div>
 
     </section>
