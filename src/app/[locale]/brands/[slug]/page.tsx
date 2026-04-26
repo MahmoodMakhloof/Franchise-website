@@ -58,6 +58,8 @@ export default async function BrandPage({
           cuisine={t(`${brand.key}.cuisine`)}
           blurb={t(`${brand.key}.blurb`)}
           instagram={brand.instagram}
+          facebook={brand.facebook}
+          tiktok={brand.tiktok}
           locale={locale}
           backLabel={nav('backToBrands')}
           franchiseLabel={nav('cta')}

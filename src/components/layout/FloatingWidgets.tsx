@@ -4,6 +4,7 @@ import { motion, useScroll, useSpring, useMotionValue, useTransform } from 'fram
 import { MessageCircle, ArrowUp } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { useTranslations } from 'next-intl';
+import { Link } from '@/i18n/routing';
 
 export function FloatingWidgets() {
   const t = useTranslations('floating');
@@ -71,38 +72,42 @@ export function FloatingWidgets() {
       </motion.div>
 
       {/* ── 4. Bottom-right floating WhatsApp/CTA (continuous bob + ping) ── */}
-      <motion.a
-        href="#contact"
+      <motion.div
         initial={{ opacity: 0, scale: 0 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ delay: 1.2, duration: 0.6, type: 'spring' }}
-        className="group fixed bottom-4 end-4 z-40 block sm:bottom-6 sm:end-6"
-        aria-label={t('contactAria')}
+        className="fixed bottom-4 end-4 z-40 block sm:bottom-6 sm:end-6"
       >
-        {/* Outer ping rings — continuous */}
-        <span className="absolute inset-0 animate-ping rounded-full bg-brand-500 opacity-25" />
-        <span
-          className="absolute inset-0 animate-ping rounded-full bg-brand-500 opacity-20"
-          style={{ animationDelay: '0.6s' }}
-        />
-
-        {/* Main button — continuous gentle bob */}
-        <motion.div
-          animate={{ y: [0, -5, 0] }}
-          transition={{ duration: 2.8, repeat: Infinity, ease: 'easeInOut' }}
-          className="relative flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-brand-500 to-brand-700 text-white shadow-brand transition-transform duration-300 group-hover:scale-110 sm:h-14 sm:w-14"
+        <Link
+          href="/#contact"
+          className="group block"
+          aria-label={t('contactAria')}
         >
-          {/* Inner shine overlay */}
-          <span className="absolute inset-0 rounded-full bg-gradient-to-br from-white/25 to-transparent" />
-          <MessageCircle className="relative h-5 w-5 sm:h-6 sm:w-6" />
-        </motion.div>
+          {/* Outer ping rings — continuous */}
+          <span className="absolute inset-0 animate-ping rounded-full bg-brand-500 opacity-25" />
+          <span
+            className="absolute inset-0 animate-ping rounded-full bg-brand-500 opacity-20"
+            style={{ animationDelay: '0.6s' }}
+          />
 
-        {/* Tooltip */}
-        <div className="pointer-events-none absolute end-full top-1/2 me-4 -translate-y-1/2 whitespace-nowrap rounded-full bg-gray-900 px-4 py-2 text-xs font-bold text-white opacity-0 shadow-lg transition-all duration-300 group-hover:opacity-100 group-hover:me-5 rtl:start-full rtl:end-auto rtl:ms-4 rtl:group-hover:ms-5">
-          {t('tooltip')}
-          <span className="absolute top-1/2 -translate-y-1/2 border-4 border-transparent border-s-gray-900 end-full rtl:start-full rtl:end-auto rtl:border-s-transparent rtl:border-e-gray-900" />
-        </div>
-      </motion.a>
+          {/* Main button — continuous gentle bob */}
+          <motion.div
+            animate={{ y: [0, -5, 0] }}
+            transition={{ duration: 2.8, repeat: Infinity, ease: 'easeInOut' }}
+            className="relative flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-brand-500 to-brand-700 text-white shadow-brand transition-transform duration-300 group-hover:scale-110 sm:h-14 sm:w-14"
+          >
+            {/* Inner shine overlay */}
+            <span className="absolute inset-0 rounded-full bg-gradient-to-br from-white/25 to-transparent" />
+            <MessageCircle className="relative h-5 w-5 sm:h-6 sm:w-6" />
+          </motion.div>
+
+          {/* Tooltip */}
+          <div className="pointer-events-none absolute end-full top-1/2 me-4 -translate-y-1/2 whitespace-nowrap rounded-full bg-gray-900 px-4 py-2 text-xs font-bold text-white opacity-0 shadow-lg transition-all duration-300 group-hover:opacity-100 group-hover:me-5 rtl:start-full rtl:end-auto rtl:ms-4 rtl:group-hover:ms-5">
+            {t('tooltip')}
+            <span className="absolute top-1/2 -translate-y-1/2 border-4 border-transparent border-s-gray-900 end-full rtl:start-full rtl:end-auto rtl:border-s-transparent rtl:border-e-gray-900" />
+          </div>
+        </Link>
+      </motion.div>
 
       {/* ── 5. Scroll-to-top button (only after scrolling) ── */}
       <motion.button

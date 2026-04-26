@@ -116,7 +116,7 @@
       "jinzo": { "name": "Jinzo", "cuisine": "Mexican Street Food", "blurb": "Bold, loud, and unmistakably Mexican — a street-food concept built for speed and scale." },
       "shakencake": { "name": "Shake N Cake", "cuisine": "Milkshake Bar & Café", "blurb": "An over-the-top milkshake experience with desserts and savory shareables — instantly Instagrammable." },
       "ktown": { "name": "K-Town", "cuisine": "Korean Street Food", "blurb": "Korean street food, bold flavors, and a young energetic identity that travels." },
-      "haret": { "name": "Haret Elyasmeen", "cuisine": "Palestinian Cuisine", "blurb": "Authentic Palestinian heritage served with warmth — full-experience dining." },
+      "haret": { "name": "Haret alyasmina", "cuisine": "Palestinian Cuisine", "blurb": "Authentic Palestinian heritage served with warmth — full-experience dining." },
       "stravo": { "name": "Stravo", "cuisine": "Italian Street Food", "blurb": "Italian street food made fast and fun without losing the soul of the cuisine." },
       "tokyotreats": { "name": "Tokyo Treats", "cuisine": "Japanese Desserts", "blurb": "Japanese-inspired desserts with a playful modern twist — a destination concept." }
     }

@@ -1,6 +1,7 @@
 import { useTranslations } from 'next-intl';
 import { Reveal } from '@/components/ui/Reveal';
 import { ArrowRight } from 'lucide-react';
+import { Link } from '@/i18n/routing';
 
 export function Investment() {
   const t = useTranslations('investment');
@@ -19,13 +20,13 @@ export function Investment() {
               <h2 className="h-display text-2xl text-white sm:text-3xl md:text-5xl leading-tight">
                 {t('title')}
               </h2>
-              <a
-                href="#contact"
+              <Link
+                href="/#contact"
                 className="group mt-8 inline-flex items-center gap-3 rounded-full bg-brand-500 px-6 py-3.5 text-sm font-bold text-white shadow-brand transition hover:-translate-y-0.5 hover:bg-brand-600 sm:mt-12 sm:px-8 sm:py-4"
               >
                 {t('cta')}
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1 rtl:rotate-180" />
-              </a>
+              </Link>
             </div>
           </div>
         </Reveal>

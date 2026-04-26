@@ -1,9 +1,9 @@
 'use client';
 
 import Image from 'next/image';
-import Link from 'next/link';
+import { Link } from '@/i18n/routing';
 import { motion } from 'framer-motion';
-import { ArrowLeft, ArrowRight, Instagram } from 'lucide-react';
+import { ArrowLeft, ArrowRight, Instagram, Facebook, Music2 } from 'lucide-react';
 
 interface Props {
   accent: string;
@@ -14,6 +14,8 @@ interface Props {
   cuisine: string;
   blurb: string;
   instagram?: string;
+  facebook?: string;
+  tiktok?: string;
   locale: string;
   backLabel: string;
   franchiseLabel: string;
@@ -27,6 +29,8 @@ export function BrandHero({
   cuisine,
   blurb,
   instagram,
+  facebook,
+  tiktok,
   locale,
   backLabel,
   franchiseLabel,
@@ -64,7 +68,7 @@ export function BrandHero({
           className="absolute top-8 start-4 md:start-0"
         >
           <Link
-            href={`/${locale}`}
+            href="/"
             className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-xs font-bold text-white backdrop-blur-sm transition hover:bg-white/20"
           >
             <ArrowLeft className="h-3.5 w-3.5 rtl:rotate-180" />
@@ -107,23 +111,45 @@ export function BrandHero({
             transition={{ delay: 0.6, duration: 0.6 }}
             className="mt-8 flex flex-wrap items-center gap-3"
           >
-            <a
-              href={`/${locale}#contact`}
+            <Link
+              href="/#contact"
               className="inline-flex items-center gap-2 rounded-full px-7 py-3.5 text-sm font-bold text-white shadow-lg transition hover:-translate-y-0.5"
               style={{ background: accent }}
             >
               {franchiseLabel}
               <ArrowRight className="h-4 w-4 rtl:rotate-180" />
-            </a>
+            </Link>
             {instagram && (
               <a
                 href={instagram}
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-5 py-3.5 text-sm font-bold text-white backdrop-blur-sm transition hover:bg-white/20"
+                aria-label="Instagram"
               >
                 <Instagram className="h-4 w-4" />
-                {instagramLabel}
+              </a>
+            )}
+            {facebook && (
+              <a
+                href={facebook}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-5 py-3.5 text-sm font-bold text-white backdrop-blur-sm transition hover:bg-white/20"
+                aria-label="Facebook"
+              >
+                <Facebook className="h-4 w-4" />
+              </a>
+            )}
+            {tiktok && (
+              <a
+                href={tiktok}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-5 py-3.5 text-sm font-bold text-white backdrop-blur-sm transition hover:bg-white/20"
+                aria-label="TikTok"
+              >
+                <Music2 className="h-4 w-4" />
               </a>
             )}
           </motion.div>

@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
 import { ArrowRight, Sparkles } from 'lucide-react';
+import { Link } from '@/i18n/routing';
 
 function TimelineStep({
   step,
@@ -220,13 +221,13 @@ export function Process() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="mt-6 ps-[3.5rem] sm:mt-8 sm:ps-20 md:ps-24"
             >
-              <a
-                href="#contact"
+              <Link
+                href="/#contact"
                 className="group inline-flex items-center gap-3 rounded-full bg-gray-900 px-8 py-4 text-sm font-bold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-brand-500 hover:shadow-brand"
               >
                 {t('cta')}
                 <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1 rtl:rotate-180" />
-              </a>
+              </Link>
             </motion.div>
           </div>
         </div>

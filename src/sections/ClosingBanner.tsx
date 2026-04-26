@@ -1,6 +1,7 @@
 import { useTranslations } from 'next-intl';
 import { Reveal } from '@/components/ui/Reveal';
 import { ArrowRight } from 'lucide-react';
+import { Link } from '@/i18n/routing';
 
 export function ClosingBanner() {
   const t = useTranslations('closing');
@@ -14,10 +15,10 @@ export function ClosingBanner() {
           <p className="mt-3 text-xs font-bold uppercase tracking-[0.22em] text-brand-500 sm:mt-4 sm:text-sm sm:tracking-[0.3em] md:text-base">
             {t('line2')}
           </p>
-          <a href="#contact" className="btn-primary mt-8 mx-auto sm:mt-10">
+          <Link href="/#contact" className="btn-primary mt-8 mx-auto sm:mt-10">
             {t('cta')}
             <ArrowRight className="h-4 w-4 rtl:rotate-180" />
-          </a>
+          </Link>
         </Reveal>
       </div>
     </section>

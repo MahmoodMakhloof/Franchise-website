@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import { Link } from '@/i18n/routing';
 import { ArrowRight } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { Reveal } from '@/components/ui/Reveal';
@@ -34,7 +34,7 @@ export function BrandCTA({ accent, name, locale }: Props) {
                 {t('ctaSubtitle')}
               </p>
               <Link
-                href={`/${locale}#contact`}
+                href="/#contact"
                 className="group mt-10 inline-flex items-center gap-2.5 rounded-full px-8 py-4 text-sm font-bold text-white transition hover:-translate-y-0.5"
                 style={{ background: accent }}
               >

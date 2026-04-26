@@ -16,6 +16,8 @@ export interface BrandConfig {
   heroImage?: string;
   gallery?: string[];
   instagram?: string;
+  facebook?: string;
+  tiktok?: string;
 }
 
 export const BRANDS: BrandConfig[] = [
@@ -41,7 +43,9 @@ export const BRANDS: BrandConfig[] = [
       '/images/shakencake/sc-18.webp',
       '/images/shakencake/sc-21.webp'
     ],
-    instagram: 'https://www.instagram.com/crazyshakencake'
+    instagram: 'https://www.instagram.com/crazyshakencake?igsh=MTV6dHpnc2pveG5hbA==',
+    facebook: 'https://www.facebook.com/share/1B5KUSPRtq/?mibextid=wwXIfr',
+    tiktok: 'https://www.tiktok.com/@shake.n.cake?_r=1&_t=ZS-95qEC1WFoKA'
   },
   {
     key: 'stravo',
@@ -59,7 +63,9 @@ export const BRANDS: BrandConfig[] = [
       '/images/stravo/05.webp',
       '/images/stravo/06.webp'
     ],
-    instagram: 'https://www.instagram.com/stravo_eg'
+    instagram: 'https://www.instagram.com/stravo_eg?igsh=dHVocXI0ZjR0OTl2',
+    facebook: 'https://www.facebook.com/share/1D7f9pye3R/?mibextid=wwXIfr',
+    tiktok: 'https://www.tiktok.com/@stravo_eg?_r=1&_t=ZS-95qE9O9G4NL'
   },
   {
     key: 'jinzo',
@@ -79,7 +85,9 @@ export const BRANDS: BrandConfig[] = [
       '/images/jinzo/img-p10-01.webp',
       '/images/jinzo/img-p10-02.webp'
     ],
-    instagram: 'https://www.instagram.com/jinzoeg'
+    instagram: 'https://www.instagram.com/jinzoeg?igsh=YWF5aHIxc215NDRh',
+    facebook: 'https://www.facebook.com/share/1AALBasCbA/?mibextid=wwXIfr',
+    tiktok: 'https://www.tiktok.com/@jinzoeg?_r=1&_t=ZS-95qE8Ezc7jb'
   },
   {
     key: 'ktown',
@@ -97,11 +105,13 @@ export const BRANDS: BrandConfig[] = [
       '/images/ktown/tender-crispy.webp',
       '/images/ktown/double-crunchy-cheese.webp'
     ],
-    instagram: 'https://www.instagram.com/ktowneg'
+    instagram: 'https://www.instagram.com/ktowneg?igsh=MW5qYnlnbXNlemRtMw==',
+    facebook: 'https://www.facebook.com/share/18TV7akN9f/?mibextid=wwXIfr',
+    tiktok: 'https://www.tiktok.com/@ktown.egypt?_r=1&_t=ZS-95qE77zMLFS'
   },
   {
     key: 'haret',
-    slug: 'haret-elyasmeen',
+    slug: 'haret-alyasmina',
     accent: '#b5533c',
     bgFrom: '#f8f2e0',
     bgTo: '#fbf7ea',
@@ -116,7 +126,8 @@ export const BRANDS: BrandConfig[] = [
       '/images/haret/img-p17-01.webp',
       '/images/haret/img-p9-01.webp',
       '/images/haret/img-p2-01.webp'
-    ]
+    ],
+    instagram: 'https://www.instagram.com/harat.alyasmina?igsh=MTNlN2xjc2d3dXAyeQ=='
   },
   {
     key: 'tokyotreats',
@@ -140,7 +151,8 @@ export const BRANDS: BrandConfig[] = [
       '/images/tokyotreats/tokyo-11.webp',
       '/images/tokyotreats/tokyo-12.webp'
     ],
-    instagram: 'https://www.instagram.com/tokyotreats_eg'
+    instagram: 'https://www.instagram.com/tokyotreats_eg?igsh=emlzdTEycGw4cnRt',
+    facebook: 'https://www.facebook.com/share/1DfELQFQAS/?mibextid=wwXIfr'
   }
 ];
 

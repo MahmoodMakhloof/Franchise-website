@@ -5,6 +5,7 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import { ArrowRight } from 'lucide-react';
 import { useRef } from 'react';
+import { Link } from '@/i18n/routing';
 
 const HERO_PRODUCTS = [
   { key: 'jinzo',       image: '/images/jinzo/img-p7-01.webp',            tint: '#fef3e7' },
@@ -101,22 +102,22 @@ export function Hero() {
             transition={{ duration: 0.8, delay: 0.6, ease: [0.16, 1, 0.3, 1] }}
             className="mt-8 flex flex-wrap items-center gap-5 sm:mt-10 sm:gap-6"
           >
-            <a
-              href="#contact"
+            <Link
+              href="/#contact"
               className="group flex items-center gap-3 rounded-full bg-gray-950 px-6 py-3 text-sm font-bold text-white shadow-xl shadow-gray-900/10 transition-all duration-400 hover:scale-[1.02] hover:bg-red-600 hover:shadow-2xl hover:shadow-red-600/25 sm:px-8 sm:py-4 sm:text-[15px]"
             >
               {t('cta')}
               <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1 rtl:rotate-180" />
-            </a>
-            <a
-              href="#brands"
+            </Link>
+            <Link
+              href="/#brands"
               className="group flex items-center gap-2 text-sm font-bold text-gray-950 transition-colors hover:text-red-600 sm:text-[15px]"
             >
               <span className="relative pb-1">
                 {t('secondaryCta')}
                 <span className="absolute inset-x-0 bottom-0 h-[2px] scale-x-0 bg-red-600 transition-transform duration-300 origin-left group-hover:scale-x-100 rtl:origin-right" />
               </span>
-            </a>
+            </Link>
           </motion.div>
 
           {/* Stats */}

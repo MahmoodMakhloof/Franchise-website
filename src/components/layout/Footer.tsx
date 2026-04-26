@@ -2,6 +2,7 @@ import Image from 'next/image';
 import { useTranslations, useLocale } from 'next-intl';
 import { Instagram, Mail, Phone, Facebook, Twitter } from 'lucide-react';
 import { BRANDS } from '@/lib/brands';
+import { Link } from '@/i18n/routing';
 
 const SECTIONS = ['about', 'brands', 'services', 'process', 'contact'] as const;
 
@@ -41,12 +42,12 @@ export function Footer() {
             <ul className="space-y-2.5">
               {SECTIONS.map((id) => (
                 <li key={id}>
-                  <a
-                    href={`#${id}`}
+                  <Link
+                    href={`/#${id}`}
                     className="text-sm text-white/60 transition hover:text-brand-400"
                   >
                     {t(`nav.${id}`)}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -76,7 +77,7 @@ export function Footer() {
                 </div>
                 <div className="flex flex-wrap gap-2">
                   <a
-                    href="https://www.instagram.com/cityhub.eg"
+                    href="https://www.instagram.com/chcd.eg?igsh=azBucmM3MngxdGxw"
                     target="_blank"
                     rel="noreferrer"
                     className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/10 transition hover:border-pink-400 hover:bg-pink-500/10 hover:text-pink-400"
@@ -85,22 +86,13 @@ export function Footer() {
                     <Instagram className="h-4 w-4" />
                   </a>
                   <a
-                    href="https://www.facebook.com/cityhub.eg"
+                    href="https://www.facebook.com/share/1DQeSK8YcY/?mibextid=wwXIfr"
                     target="_blank"
                     rel="noreferrer"
                     className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/10 transition hover:border-blue-400 hover:bg-blue-500/10 hover:text-blue-400"
                     aria-label="Facebook"
                   >
                     <Facebook className="h-4 w-4" />
-                  </a>
-                  <a
-                    href="https://twitter.com/cityhub_eg"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/10 transition hover:border-sky-400 hover:bg-sky-500/10 hover:text-sky-400"
-                    aria-label="Twitter"
-                  >
-                    <Twitter className="h-4 w-4" />
                   </a>
                 </div>
               </li>

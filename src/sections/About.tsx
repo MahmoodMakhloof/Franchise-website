@@ -10,6 +10,7 @@ import {
   Rocket,
   type LucideIcon,
 } from 'lucide-react';
+import { Link } from '@/i18n/routing';
 
 const EASE = [0.16, 1, 0.3, 1] as const;
 
@@ -49,8 +50,8 @@ export function About() {
             <p className="mt-5 max-w-lg text-[15px] leading-relaxed text-gray-500 sm:text-base md:text-[17px]">
               {paragraphs[0]}
             </p>
-            <a
-              href="#brands"
+            <Link
+              href="/#brands"
               className="group mt-8 inline-flex items-center gap-2 text-sm font-bold text-gray-900 transition-colors hover:text-brand-500"
             >
               <span className="relative pb-0.5">
@@ -58,7 +59,7 @@ export function About() {
                 <span className="absolute inset-x-0 bottom-0 h-px bg-gray-900 transition-colors duration-300 group-hover:bg-brand-500" />
               </span>
               <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1 rtl:rotate-180 rtl:group-hover:-translate-x-1" />
-            </a>
+            </Link>
           </motion.div>
 
           {/* Right: overlapped visa-style cards */}
