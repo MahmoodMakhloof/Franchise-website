@@ -1,6 +1,4 @@
 import { NextResponse } from 'next/server';
-import { connectMongo } from '@/lib/db/mongo';
-import { Lead } from '@/lib/db/models/Lead';
 import { leadSchema, type LeadInput } from '@/lib/schemas/lead';
 
 export const runtime = 'nodejs';
@@ -9,7 +7,7 @@ export const dynamic = 'force-dynamic';
 async function sendTelegram(data: LeadInput) {
   const token = process.env.TELEGRAM_BOT_TOKEN;
   const chatId = process.env.TELEGRAM_CHAT_ID;
-  if (!token || !chatId) return;
+  if (!token || !chatId) throw new Error('Telegram env vars not set');
 
   const text = [
     `🆕 *New Lead*`,
@@ -21,15 +19,15 @@ async function sendTelegram(data: LeadInput) {
     `💰 ${data.budget}`,
     `🍽️ Brand: ${data.brand}`,
     data.message ? `\n📝 ${data.message}` : '',
-  ]
-    .filter((l) => l !== undefined)
-    .join('\n');
+  ].join('\n');
 
-  await fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
+  const res = await fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ chat_id: chatId, text, parse_mode: 'Markdown' }),
   });
+
+  if (!res.ok) throw new Error(`Telegram error: ${res.status}`);
 }
 
 export async function POST(req: Request) {
@@ -43,21 +41,9 @@ export async function POST(req: Request) {
       );
     }
 
-    await connectMongo();
+    await sendTelegram(parsed.data);
 
-    const ip =
-      req.headers.get('x-forwarded-for')?.split(',')[0]?.trim() ||
-      req.headers.get('x-real-ip') ||
-      undefined;
-    const userAgent = req.headers.get('user-agent') || undefined;
-
-    const doc = await Lead.create({ ...parsed.data, ip, userAgent });
-
-    sendTelegram(parsed.data).catch((e) =>
-      console.error('Telegram notification failed', e)
-    );
-
-    return NextResponse.json({ ok: true, id: String(doc._id) }, { status: 201 });
+    return NextResponse.json({ ok: true }, { status: 201 });
   } catch (err) {
     console.error('POST /api/leads failed', err);
     return NextResponse.json({ ok: false, error: 'server_error' }, { status: 500 });
