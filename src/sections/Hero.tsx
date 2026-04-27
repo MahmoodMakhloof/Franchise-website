@@ -44,7 +44,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-            className="font-display text-[1.75rem] font-black leading-[1.15] text-gray-950 sm:text-4xl md:text-[2.75rem] lg:text-[3.35rem]"
+            className="font-display text-[1.75rem] font-black leading-[1.4] text-gray-950 sm:text-4xl sm:leading-[1.3] md:text-[2.75rem] md:leading-[1.25] lg:text-[3.35rem] lg:leading-[1.15]"
           >
             {t('title')}
           </motion.h1>
@@ -106,17 +106,17 @@ export function Hero() {
         </div>
 
         {/* ── IMAGE SIDE ── */}
-        <motion.div 
-           initial={{ opacity: 0, scale: 0.95, y: 20 }}
-           animate={{ opacity: 1, scale: 1, y: 0 }}
-           transition={{ delay: 0.3, duration: 1, ease: [0.16, 1, 0.3, 1] }}
-           className="relative mx-auto flex w-full max-w-[320px] sm:max-w-[500px] items-center justify-center lg:max-w-[700px] lg:pe-8 lg:ps-8 mt-12 lg:mt-0"
+        <motion.div
+          initial={{ opacity: 0, scale: 0.95, y: 20 }}
+          animate={{ opacity: 1, scale: 1, y: 0 }}
+          transition={{ delay: 0.3, duration: 1, ease: [0.16, 1, 0.3, 1] }}
+          className="relative mx-auto flex w-full max-w-[320px] sm:max-w-[500px] items-center justify-center lg:max-w-[700px] lg:pe-8 lg:ps-8 mt-12 lg:mt-0"
         >
           {/* Subtle Red Ambient Glow behind logo */}
           <div className="absolute inset-0 flex items-center justify-center pointer-events-none" aria-hidden>
             <div className="h-[60%] w-[60%] rounded-full bg-red-600/10 blur-[100px]" />
           </div>
-          
+
           <div className="relative w-full aspect-[1.42]">
             <Image
               src="/images/hero/cityhub-place.webp"

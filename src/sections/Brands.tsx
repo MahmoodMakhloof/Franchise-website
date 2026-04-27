@@ -82,7 +82,7 @@ function BrandPanel({
 
         {/* Text block — travels from BOTTOM to TOP on hover (desktop only) */}
         <div className="absolute inset-x-0 bottom-6 z-20 px-5 transition-[bottom] duration-[800ms] ease-[cubic-bezier(0.16,1,0.3,1)] md:bottom-12 md:px-7 lg:group-hover:bottom-[calc(100%-180px)]">
-          <h3 className="font-display text-3xl font-black leading-[0.95] tracking-tight text-white sm:text-4xl md:text-5xl lg:text-6xl">
+          <h3 className="font-display text-3xl font-black leading-tight tracking-tight text-white sm:text-4xl md:text-5xl lg:text-6xl">
             {t(`items.${b.key}.name`)}
           </h3>
           {/* On mobile: blurb always visible. On desktop: hover-reveal */}

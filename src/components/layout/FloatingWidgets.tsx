@@ -4,7 +4,6 @@ import { motion, useScroll, useSpring, useMotionValue, useTransform } from 'fram
 import { MessageCircle, ArrowUp } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { useTranslations } from 'next-intl';
-import { Link } from '@/i18n/routing';
 
 export function FloatingWidgets() {
   const t = useTranslations('floating');
@@ -78,8 +77,10 @@ export function FloatingWidgets() {
         transition={{ delay: 1.2, duration: 0.6, type: 'spring' }}
         className="fixed bottom-4 end-4 z-40 block sm:bottom-6 sm:end-6"
       >
-        <Link
-          href="/#contact"
+        <a
+          href="https://wa.me/201060028181"
+          target="_blank"
+          rel="noreferrer"
           className="group block"
           aria-label={t('contactAria')}
         >
@@ -106,7 +107,7 @@ export function FloatingWidgets() {
             {t('tooltip')}
             <span className="absolute top-1/2 -translate-y-1/2 border-4 border-transparent border-s-gray-900 end-full rtl:start-full rtl:end-auto rtl:border-s-transparent rtl:border-e-gray-900" />
           </div>
-        </Link>
+        </a>
       </motion.div>
 
       {/* ── 5. Scroll-to-top button (only after scrolling) ── */}

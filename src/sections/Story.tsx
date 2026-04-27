@@ -35,7 +35,7 @@ export function Story() {
                   {t('eyebrow')}
                 </span>
               </div>
-              <h2 className="h-display mb-5 text-3xl leading-[1.15] text-gray-900 sm:text-4xl md:text-5xl">
+              <h2 className="h-display mb-5 text-3xl leading-snug text-gray-900 sm:text-4xl md:text-5xl">
                 {t('title')}
               </h2>
               <p className="text-xl font-medium text-gray-500 sm:text-2xl">

@@ -62,16 +62,16 @@ export function Contact() {
                 <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-brand-50 text-brand-500">
                   <Mail className="h-4 w-4" />
                 </div>
-                <a href="mailto:info@cityhub.eg" className="hover:text-brand-500 transition">
-                  info@cityhub.eg
+                <a href="mailto:Info@city-hub.net" className="hover:text-brand-500 transition">
+                  Info@city-hub.net
                 </a>
               </div>
               <div className="flex items-center gap-3 text-sm text-gray-600">
                 <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-brand-50 text-brand-500">
                   <Phone className="h-4 w-4" />
                 </div>
-                <a href="tel:+201000000000" className="hover:text-brand-500 transition" dir="ltr">
-                  +20 100 000 0000
+                <a href="tel:+201060028181" className="hover:text-brand-500 transition" dir="ltr">
+                  +20 106 002 8181
                 </a>
               </div>
               <div className="flex items-center gap-3 text-sm text-gray-600">

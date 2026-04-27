@@ -44,7 +44,7 @@ export function About() {
                 {t('eyebrow')}
               </span>
             </div>
-            <h2 className="h-display text-3xl leading-[1.15] text-gray-900 sm:text-4xl md:text-5xl">
+            <h2 className="h-display text-3xl leading-snug text-gray-900 sm:text-4xl md:text-5xl">
               {t('title')}
             </h2>
             <p className="mt-5 max-w-lg text-[15px] leading-relaxed text-gray-500 sm:text-base md:text-[17px]">

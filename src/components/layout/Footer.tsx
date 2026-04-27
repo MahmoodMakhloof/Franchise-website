@@ -61,14 +61,14 @@ export function Footer() {
             <ul className="space-y-3 text-sm text-white/60">
               <li className="flex items-center gap-2.5">
                 <Mail className="h-3.5 w-3.5 text-brand-400 flex-none" />
-                <a href="mailto:info@cityhub.eg" className="hover:text-white transition">
-                  info@cityhub.eg
+                <a href="mailto:Info@city-hub.net" className="hover:text-white transition">
+                  Info@city-hub.net
                 </a>
               </li>
               <li className="flex items-center gap-2.5">
                 <Phone className="h-3.5 w-3.5 text-brand-400 flex-none" />
-                <a href="tel:+201000000000" className="hover:text-white transition" dir="ltr">
-                  +20 100 000 0000
+                <a href="tel:+201060028181" className="hover:text-white transition" dir="ltr">
+                  +20 106 002 8181
                 </a>
               </li>
               <li className="mt-5">

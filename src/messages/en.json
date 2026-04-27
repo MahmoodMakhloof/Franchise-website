@@ -22,8 +22,8 @@
   "hero": {
     "eyebrow": "Embark on your investment journey with City Hub",
     "title": "Are you ready to be part of an integrated ecosystem that builds, operates, and scales?",
-    "lead_1": "At City Hub, we don't just offer an opportunity... we provide a complete system from idea to operation with integrated consulting services covering marketing, operations, financial management, and proven Franchise models all under one roof.",
-    "lead_2": "We accompany you every step of the way—from the first contact to the grand opening and expansion—to ensure a successful and sustainable investment experience.",
+    "lead_1": "City Hub provides a complete system from idea to operation, combining expert consulting with proven Franchise models.",
+    "lead_2": "We accompany you every step of the way—from first contact to expansion—ensuring a successful investment experience.",
     "cta": "Submit Franchise Request",
     "secondaryCta": "Explore our brands",
     "imageAlt": "City Hub brands",
@@ -31,12 +31,20 @@
       "status": "Available for franchise"
     },
     "stats": {
-      "brands": { "value": "6", "label": "Operating brands" },
-      "cuisines": { "value": "6", "label": "Global cuisines" },
-      "system": { "value": "1", "label": "Integrated system" }
+      "brands": {
+        "value": "6",
+        "label": "Operating brands"
+      },
+      "cuisines": {
+        "value": "6",
+        "label": "Global cuisines"
+      },
+      "system": {
+        "value": "1",
+        "label": "Integrated system"
+      }
     }
   },
-
   "about": {
     "eyebrow": "About City Hub",
     "title": "More than a developer. A full F&B ecosystem.",
@@ -52,15 +60,36 @@
       "tagline": "From the Idea\nto the Operation."
     },
     "miniStats": [
-      { "value": "6", "label": "Operating brands" },
-      { "value": "MENA", "label": "Region" },
-      { "value": "1", "label": "Unified system" }
+      {
+        "value": "6",
+        "label": "Operating brands"
+      },
+      {
+        "value": "MENA",
+        "label": "Region"
+      },
+      {
+        "value": "1",
+        "label": "Unified system"
+      }
     ],
     "flow": [
-      { "label": "Idea", "sub": "Concept & Strategy" },
-      { "label": "Build", "sub": "Brand Development" },
-      { "label": "Operate", "sub": "Launch & Manage" },
-      { "label": "Scale", "sub": "Franchise & Expand" }
+      {
+        "label": "Idea",
+        "sub": "Concept & Strategy"
+      },
+      {
+        "label": "Build",
+        "sub": "Brand Development"
+      },
+      {
+        "label": "Operate",
+        "sub": "Launch & Manage"
+      },
+      {
+        "label": "Scale",
+        "sub": "Franchise & Expand"
+      }
     ],
     "systemTitle": "All under one integrated system",
     "capabilities": [
@@ -110,12 +139,36 @@
     "ctaSubtitle": "Submit your franchise request and our investment team will reach out within 48 hours.",
     "submitRequest": "Submit your request",
     "items": {
-      "jinzo": { "name": "Jinzo", "cuisine": "Mexican Street Food", "blurb": "Bold, loud, and unmistakably Mexican — a street-food concept built for speed and scale." },
-      "shakencake": { "name": "Shake N Cake", "cuisine": "Milkshake Bar & Café", "blurb": "An over-the-top milkshake experience with desserts and savory shareables — instantly Instagrammable." },
-      "ktown": { "name": "K-Town", "cuisine": "Korean Street Food", "blurb": "Korean street food, bold flavors, and a young energetic identity that travels." },
-      "haret": { "name": "Haret alyasmina", "cuisine": "Palestinian Cuisine", "blurb": "Authentic Palestinian heritage served with warmth — full-experience dining." },
-      "stravo": { "name": "Stravo", "cuisine": "Italian Street Food", "blurb": "Italian street food made fast and fun without losing the soul of the cuisine." },
-      "tokyotreats": { "name": "Tokyo Treats", "cuisine": "Japanese Desserts", "blurb": "Japanese-inspired desserts with a playful modern twist — a destination concept." }
+      "jinzo": {
+        "name": "Jinzo",
+        "cuisine": "Mexican Street Food",
+        "blurb": "Bold, loud, and unmistakably Mexican — a street-food concept built for speed and scale."
+      },
+      "shakencake": {
+        "name": "Shake N Cake",
+        "cuisine": "Milkshake Bar & Café",
+        "blurb": "An over-the-top milkshake experience with desserts and savory shareables — instantly Instagrammable."
+      },
+      "ktown": {
+        "name": "K-Town",
+        "cuisine": "Korean Street Food",
+        "blurb": "Korean street food, bold flavors, and a young energetic identity that travels."
+      },
+      "haret": {
+        "name": "Haret alyasmina",
+        "cuisine": "Palestinian Cuisine",
+        "blurb": "Authentic Palestinian heritage served with warmth — full-experience dining."
+      },
+      "stravo": {
+        "name": "Stravo",
+        "cuisine": "Italian Street Food",
+        "blurb": "Italian street food made fast and fun without losing the soul of the cuisine."
+      },
+      "tokyotreats": {
+        "name": "Tokyo Treats",
+        "cuisine": "Japanese Desserts",
+        "blurb": "Japanese-inspired desserts with a playful modern twist — a destination concept."
+      }
     }
   },
   "gallery": {
@@ -128,12 +181,30 @@
     "eyebrow": "Why City Hub",
     "title": "We don't just build brands — we build systems designed to perform.",
     "items": [
-      { "title": "Manufacturing integration", "description": "Central production and supply that protects quality and unit economics." },
-      { "title": "Operational excellence", "description": "Training, SOPs, and playbooks that keep every outlet on brand." },
-      { "title": "Marketing & growth", "description": "In-house marketing strategy and execution designed for F&B conversion." },
-      { "title": "Financial control", "description": "Cost optimization, pricing, and live financial monitoring." },
-      { "title": "Prime locations", "description": "Mall development and location sourcing through our real-estate network." },
-      { "title": "Franchise-ready models", "description": "Systems, documentation, and support built to scale from day one." }
+      {
+        "title": "Manufacturing integration",
+        "description": "Central production and supply that protects quality and unit economics."
+      },
+      {
+        "title": "Operational excellence",
+        "description": "Training, SOPs, and playbooks that keep every outlet on brand."
+      },
+      {
+        "title": "Marketing & growth",
+        "description": "In-house marketing strategy and execution designed for F&B conversion."
+      },
+      {
+        "title": "Financial control",
+        "description": "Cost optimization, pricing, and live financial monitoring."
+      },
+      {
+        "title": "Prime locations",
+        "description": "Mall development and location sourcing through our real-estate network."
+      },
+      {
+        "title": "Franchise-ready models",
+        "description": "Systems, documentation, and support built to scale from day one."
+      }
     ]
   },
   "story": {
@@ -155,17 +226,44 @@
     "badgeLine2": "Under one roof.",
     "cta": "Start your journey now",
     "miniStats": [
-      { "value": "48", "label": "Hours to reply" },
-      { "value": "6", "label": "Brands" },
-      { "value": "1", "label": "Unified system" }
+      {
+        "value": "48",
+        "label": "Hours to reply"
+      },
+      {
+        "value": "6",
+        "label": "Brands"
+      },
+      {
+        "value": "1",
+        "label": "Unified system"
+      }
     ],
     "steps": [
-      { "title": "Submit your request", "description": "Share your city, budget, and preferred brand. We review within 48 hours." },
-      { "title": "Discovery meeting", "description": "We align on your goals, experience, and investment readiness." },
-      { "title": "Business alignment", "description": "We match you with the brand that fits your market, budget, and ambitions." },
-      { "title": "Location & development", "description": "We help source, assess, and build out your location end-to-end." },
-      { "title": "Training & operation", "description": "Team training, SOP rollout, and a supervised soft-launch period." },
-      { "title": "Launch", "description": "Full marketing launch, opening support, and continuous performance monitoring." }
+      {
+        "title": "Submit your request",
+        "description": "Share your city, budget, and preferred brand. We review within 48 hours."
+      },
+      {
+        "title": "Discovery meeting",
+        "description": "We align on your goals, experience, and investment readiness."
+      },
+      {
+        "title": "Business alignment",
+        "description": "We match you with the brand that fits your market, budget, and ambitions."
+      },
+      {
+        "title": "Location & development",
+        "description": "We help source, assess, and build out your location end-to-end."
+      },
+      {
+        "title": "Training & operation",
+        "description": "Team training, SOP rollout, and a supervised soft-launch period."
+      },
+      {
+        "title": "Launch",
+        "description": "Full marketing launch, opening support, and continuous performance monitoring."
+      }
     ]
   },
   "investment": {
@@ -177,11 +275,26 @@
     "eyebrow": "Support system",
     "title": "Your business is backed by a full support team",
     "items": [
-      { "title": "Continuous consulting", "description": "Advisory across growth, operations, and strategy." },
-      { "title": "Operational support", "description": "On-the-ground ops coverage whenever you need it." },
-      { "title": "Marketing execution", "description": "Campaigns, content, and performance marketing." },
-      { "title": "Financial monitoring", "description": "Dashboards and controls to protect margin." },
-      { "title": "Performance optimization", "description": "Continuous improvement based on real store data." }
+      {
+        "title": "Continuous consulting",
+        "description": "Advisory across growth, operations, and strategy."
+      },
+      {
+        "title": "Operational support",
+        "description": "On-the-ground ops coverage whenever you need it."
+      },
+      {
+        "title": "Marketing execution",
+        "description": "Campaigns, content, and performance marketing."
+      },
+      {
+        "title": "Financial monitoring",
+        "description": "Dashboards and controls to protect margin."
+      },
+      {
+        "title": "Performance optimization",
+        "description": "Continuous improvement based on real store data."
+      }
     ]
   },
   "stats": {
@@ -189,10 +302,22 @@
     "title": "Our Regional Footprint",
     "subtitle": "City Hub scales across Egypt, the Middle East, and Africa — one system, replicable brands.",
     "items": [
-      { "value": "6", "label": "Brands" },
-      { "value": "+8", "label": "Target Countries" },
-      { "value": "+20", "label": "Outlets Pipeline" },
-      { "value": "1", "label": "Unified System" }
+      {
+        "value": "6",
+        "label": "Brands"
+      },
+      {
+        "value": "+8",
+        "label": "Target Countries"
+      },
+      {
+        "value": "+20",
+        "label": "Outlets Pipeline"
+      },
+      {
+        "value": "1",
+        "label": "Unified System"
+      }
     ],
     "regions": {
       "egypt": "Egypt",
@@ -219,7 +344,7 @@
       "email": "Email",
       "emailPlaceholder": "you@example.com",
       "phone": "Phone",
-      "phonePlaceholder": "+20 100 000 0000",
+      "phonePlaceholder": "+20 106 002 8181",
       "city": "City of interest",
       "cityPlaceholder": "e.g. Cairo, Riyadh, Dubai",
       "budget": "Investment budget",

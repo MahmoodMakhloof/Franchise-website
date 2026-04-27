@@ -52,7 +52,7 @@ export function Support() {
             </span>
             <span className="h-px w-8 bg-brand-500" />
           </div>
-          <h2 className="h-display text-3xl leading-[1.15] text-white sm:text-4xl md:text-5xl">
+          <h2 className="h-display text-3xl leading-snug text-white sm:text-4xl md:text-5xl">
             {t('title')}
           </h2>
         </motion.div>
